@@ -62,8 +62,8 @@ At this point you have two option:
 
 We can now import the template we want to use:
 ```
-[alex@freddy gogs-template]$ oc create -f gog-standalone-template.yml 
-template "gogs-mysql-template" created
+[alex@freddy gogs-template]$ oc create -f gogs-standalone-template.yml 
+template "gogs-standalone-template" created
 ```
 And then  use it to create a new-app, please note how we actually override APPLICAITON_DOMAIN variable:
 ```
