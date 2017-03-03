@@ -51,6 +51,10 @@ And then we give it all the needed rights:
 ```
 [alex@freddy gogs-template]$ oadm policy add-scc-to-user privileged system:serviceaccount:gogs:gogs
 ```
+Alternatively, when working with an OpenShift cluster (e.g. on minishift or with oc cluster), enter: 
+```
+[alex@freddy gogs-template]$ oc adm policy add-scc-to-user privileged system:serviceaccount:gogs:gogs
+```
 
 
 At this point you have two option:
@@ -62,8 +66,8 @@ At this point you have two option:
 
 We can now import the template we want to use:
 ```
-[alex@freddy gogs-template]$ oc create -f gog-standalone-template.yml 
-template "gogs-mysql-template" created
+[alex@freddy gogs-template]$ oc create -f gogs-standalone-template.yml 
+template "gogs-standalone-template" created
 ```
 And then  use it to create a new-app, please note how we actually override APPLICAITON_DOMAIN variable:
 ```
